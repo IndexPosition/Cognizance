@@ -1,0 +1,26 @@
+This program will output ‘True’ if a given number is divisible by 3 and ‘False’ otherwise, without using the ‘%’ operator explicitly.
+Function Main
+    Declare Integer n
+    Output "Enter the value of n : "
+    Input n
+    Call div3check(n)
+End
+
+Function div3check (Integer n)
+    Declare Integer sum
+    If n<=9
+        If n==0 or n==3 or n==6 or n==9
+            Output "True"
+        Else:
+            Output "False"
+        End
+    Else:
+        Assign sum = 0
+        While n is not = 0
+            Assign sum = sum + remainder of n when divided by 10
+            Assign n = n/10
+        End
+        Call div3check(sum)
+    End
+End
+
